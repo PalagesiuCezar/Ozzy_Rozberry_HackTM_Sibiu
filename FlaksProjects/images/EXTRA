@@ -1,0 +1,61 @@
+"""with open('z.jpeg', 'rb') as imgesFile:
+        imagestr = base64.b64encode(imgesFile.read())
+
+    response1 = subprocess.call("curl -X GET http://localhost:6666/",shell = True) #requests.get('http://localhost:6666/').content
+    print(response1)
+    with open('recicle.jpeg','wb') as imgFile:
+             imgFile.write(base64.b64decode(imagestr))
+
+
+    subprocess.call("python3 classify_image.py --image_file {}".format('recicle.jpeg'), shell=True)
+
+    with open('data.txt', 'rb') as data:
+        query = pickle.load(data)
+    print(query)
+
+    query = str(query)
+
+    rotire = 0
+    set = 0
+
+    caseUNU = ['bottle','toilet','pet','nipple']
+    for i in caseUNU:
+        if i in query:
+            rotire=1
+            set = 1
+
+    if set!=1:
+        caseDOI = ['can','crate','aluminium','oil','filter']
+        for i in caseDOI:
+            if i in query:
+                rotire =2
+                set = 1
+
+    if set!=1:
+        caseTREI = ['glass','bottle','water','beer','juice']
+        for i in caseTREI:
+            if i in query:
+                rotire = 3
+
+    if set!=1:
+        casePATRU = ['bag','cardboard']
+        for i in casePATRU:
+            if i in query:
+                rotire = 4
+
+    print(rotire)
+    if request.method == "POST" or request.method == "PUT":
+        response = requests.put('http://192.168.1.4:8080/', json=rotire)
+        print(response)"""
+
+
+
+
+
+
+
+
+file_name = 'images.txt'
+
+with open('danone.jpeg','rb') as imgesFile:
+    imagestr = base64.b64encode(imgesFile.read())
